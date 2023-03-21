@@ -1,6 +1,6 @@
 import Headmeta from "@/src/Headmeta";
-import { useRouter } from "next/router";
 import Style from "@/styles/index.module.scss";
+import { useRouter } from "next/router";
 import { useContext } from "react";
 import { PageContext } from "@/contexts/PageStatus";
 
