@@ -3,13 +3,20 @@ import React from "react";
 import Style from "@/styles/sign.module.scss";
 import { useRouter } from "next/router";
 import SignNav from "@/src/SignNav";
+import { signIn } from "next-auth/react";
 
 const Signin = () => {
   const router = useRouter();
 
-  function checkSign(e) {
+  async function checkSign(e) {
     e.preventDefault();
-    console.log("test");
+
+    // const result = await signIn("credentials", {
+    //   // redirect false - 오류 발생시 화면 새로고침 하지 않고 그대로 정지
+    //   redirect: false,
+    //   email: e.target.id.value,
+    //   password: e.target.password.value,
+    // });
   }
   return (
     <>
