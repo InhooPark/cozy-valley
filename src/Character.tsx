@@ -140,15 +140,15 @@ function Character() {
 
       <div className={Style.char_name_wrap}>
         <div className={Style.char_input}>
-          <p> &nbsp;&nbsp; ID : </p>
           <p>
-            <input type="text" name="name" placeholder="ID 입력" autoComplete="off" maxLength={12} />
+            <label htmlFor="id">ID: </label>
+            <input type="text" name="id" placeholder="ID 입력" autoComplete="off" maxLength={12} />
           </p>
         </div>
 
         <div className={Style.char_input}>
-          <p> P.W : </p>
           <p>
+            <label htmlFor="password">P.W: </label>
             <input type="password" name="password" placeholder="비밀번호 입력" maxLength={18} />
           </p>
         </div>

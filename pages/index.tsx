@@ -1,14 +1,19 @@
 import Headmeta from "@/src/Headmeta";
 import { useRouter } from "next/router";
 import Style from "@/styles/index.module.scss";
+import { useContext } from "react";
+import { PageContext } from "@/contexts/PageStatus";
 
 export default function Home() {
+  const { setSignNav } = useContext(PageContext);
   const router = useRouter();
 
   const tosignin = () => {
+    setSignNav("in");
     router.push("/signin");
   };
   const tosignup = () => {
+    setSignNav("up");
     router.push("/signup");
   };
 
