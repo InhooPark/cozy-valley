@@ -1,0 +1,80 @@
+.index_main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: backgroundWater infinite 1200ms steps(2);
+    background-size: cover;
+    filter: contrast(1.3);
+  }
+  .index_btn_wrap {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: url("/img/intro/board.png");
+    }
+    button {
+      width: 132px;
+      height: 91px;
+      margin: 20px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      position: relative;
+      &:nth-child(1) {
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+          background-image: url("/img/intro/120x80signin.png");
+        }
+      }
+      &:nth-child(2) {
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+          background-image: url("/img/intro/120x80signup.png");
+        }
+      }
+    }
+  }
+}
+
+@keyframes backgroundWater {
+  0% {
+    background-image: url("/img/intro/water1.png");
+  }
+  50% {
+    background-image: url("/img/intro/water2.png");
+  }
+  100% {
+    background-image: url("/img/intro/water1.png");
+  }
+}
